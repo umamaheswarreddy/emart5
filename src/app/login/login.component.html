@@ -1,0 +1,24 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+   
+      <div class="fadeIn first">
+        <img src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" id="icon" alt="User Icon" />
+      </div>
+  
+      <form (ngSubmit)="onLoginEmail()">
+        <label *ngIf="errorMessage.length > 0" class="text-danger">
+            {{errorMessage}}</label>
+        <label *ngIf="error.message.length > 0" class="text-danger">
+            {{error.message}}</label>
+        <input type="email" id="email" name="email" class="fadeIn second"  [(ngModel)]="email" placeholder="User Name" required/>
+        <input type="password" id="password" name="password" class="fadeIn third" [(ngModel)]="password" placeholder="Password" required/>
+        <input type="submit" class="fadeIn fourth" value="LOG IN"/>
+      </form>
+  
+     
+      <div id="formFooter">
+        <a class="underlineHover" routerLink="/signup">New User ? Sign Up</a>
+      </div>
+  
+    </div>
+  </div>
